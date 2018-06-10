@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="welcomeScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="WRv-Vj-xZc">
-                                <rect key="frame" x="-1" y="40" width="414" height="736"/>
+                                <rect key="frame" x="-1" y="0.0" width="414" height="776"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5rb-QS-bJc">
                                 <rect key="frame" x="147.66666666666666" y="60" width="118.99999999999997" height="20"/>
@@ -49,17 +49,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sO4-ps-dXb" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="666" width="414" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.40138056506849318" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gCH-HF-Rse"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="GET STARTED">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CE-l2-jOa">
                                 <rect key="frame" x="82" y="290" width="250" height="41"/>
                                 <constraints>
@@ -69,20 +58,36 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33l-sG-7q2" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="666" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.40138056509999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CT8-kf-PyI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Jg1-FT-07H"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="uUO-vf-Kne"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="q5u-sg-IXb" kind="show" id="qUI-U3-AGW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="33l-sG-7q2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="15x-VD-uzS"/>
                             <constraint firstItem="8CE-l2-jOa" firstAttribute="top" secondItem="OYn-6i-KoU" secondAttribute="bottom" constant="10" id="4bn-pa-j7s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="33l-sG-7q2" secondAttribute="bottom" constant="20" id="6S0-de-TPg"/>
                             <constraint firstItem="2sA-VD-h4a" firstAttribute="top" secondItem="5rb-QS-bJc" secondAttribute="bottom" constant="70" id="B3x-rn-oST"/>
                             <constraint firstItem="8CE-l2-jOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EBp-gQ-qNp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sO4-ps-dXb" secondAttribute="trailing" id="IUu-9t-Lrq"/>
                             <constraint firstItem="WRv-Vj-xZc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JQR-kF-Zkb"/>
                             <constraint firstItem="2sA-VD-h4a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Quv-1B-oIB"/>
-                            <constraint firstItem="sO4-ps-dXb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bID-It-ow1"/>
                             <constraint firstItem="WRv-Vj-xZc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cfm-Kw-B0i"/>
                             <constraint firstItem="5rb-QS-bJc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="iEG-wf-tYa"/>
                             <constraint firstItem="WRv-Vj-xZc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kAb-ee-FOf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sO4-ps-dXb" secondAttribute="bottom" constant="20" id="lAS-Z3-8A8"/>
+                            <constraint firstItem="33l-sG-7q2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kBe-p0-UEC"/>
                             <constraint firstItem="WRv-Vj-xZc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oGE-Pn-dSZ"/>
                             <constraint firstItem="OYn-6i-KoU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sqS-hK-Rsy"/>
                             <constraint firstItem="OYn-6i-KoU" firstAttribute="top" secondItem="2sA-VD-h4a" secondAttribute="bottom" constant="11" id="yqr-1Q-X6J"/>
@@ -90,9 +95,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="swoosh" destination="5rb-QS-bJc" id="KCs-b0-zzz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WOb-nN-Xty">
-                                <rect key="frame" x="0.0" y="40" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="70" width="414" height="70"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cVv-Cv-Lkt">
                                         <rect key="frame" x="147.66666666666666" y="0.0" width="118.99999999999997" height="20"/>
@@ -129,7 +131,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-G0-vo7">
-                                <rect key="frame" x="0.0" y="160" width="414" height="182"/>
+                                <rect key="frame" x="0.0" y="190" width="414" height="182"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnG-OF-eck" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -178,19 +180,32 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSF-VA-Tc2">
+                                <rect key="frame" x="0.0" y="10" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="1Si-NO-dfr"/>
+                                    <constraint firstAttribute="width" constant="25" id="Anv-dv-AQu"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="TZU-vv-1YP" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="Zaw-Ka-cVV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZSF-VA-Tc2" firstAttribute="top" secondItem="q3Q-li-UG1" secondAttribute="top" constant="10" id="5Ej-4h-E0a"/>
                             <constraint firstItem="Sqp-Th-Zb8" firstAttribute="trailing" secondItem="WOb-nN-Xty" secondAttribute="trailing" id="JiK-7k-2Z4"/>
                             <constraint firstItem="aFI-Bs-iZH" firstAttribute="leading" secondItem="Sqp-Th-Zb8" secondAttribute="leading" id="N8q-uT-4fy"/>
                             <constraint firstItem="Sqp-Th-Zb8" firstAttribute="bottom" secondItem="TTj-ap-UhM" secondAttribute="bottom" constant="20" id="Nrc-lD-zwz"/>
                             <constraint firstItem="Sqp-Th-Zb8" firstAttribute="trailing" secondItem="8Mo-G0-vo7" secondAttribute="trailing" id="Pqc-nn-qf3"/>
-                            <constraint firstItem="WOb-nN-Xty" firstAttribute="top" secondItem="Sqp-Th-Zb8" secondAttribute="top" constant="20" id="RP2-8O-484"/>
+                            <constraint firstItem="WOb-nN-Xty" firstAttribute="top" secondItem="Sqp-Th-Zb8" secondAttribute="top" constant="50" id="RP2-8O-484"/>
                             <constraint firstItem="8Mo-G0-vo7" firstAttribute="leading" secondItem="Sqp-Th-Zb8" secondAttribute="leading" id="RzU-z9-OND"/>
                             <constraint firstItem="aFI-Bs-iZH" firstAttribute="top" secondItem="q3Q-li-UG1" secondAttribute="top" id="TOo-C3-B9y"/>
                             <constraint firstItem="WOb-nN-Xty" firstAttribute="leading" secondItem="Sqp-Th-Zb8" secondAttribute="leading" id="WBZ-nY-acb"/>
                             <constraint firstItem="TTj-ap-UhM" firstAttribute="trailing" secondItem="Sqp-Th-Zb8" secondAttribute="trailing" id="Yt7-MX-aRr"/>
                             <constraint firstItem="8Mo-G0-vo7" firstAttribute="top" secondItem="WOb-nN-Xty" secondAttribute="bottom" constant="50" id="ZJK-op-NeD"/>
+                            <constraint firstItem="ZSF-VA-Tc2" firstAttribute="leading" secondItem="Sqp-Th-Zb8" secondAttribute="leading" id="gqc-R3-a9C"/>
                             <constraint firstItem="aFI-Bs-iZH" firstAttribute="bottom" secondItem="Sqp-Th-Zb8" secondAttribute="bottom" id="lCu-nu-CSQ"/>
                             <constraint firstItem="TTj-ap-UhM" firstAttribute="leading" secondItem="Sqp-Th-Zb8" secondAttribute="leading" id="o61-ei-TwI"/>
                             <constraint firstItem="aFI-Bs-iZH" firstAttribute="trailing" secondItem="Sqp-Th-Zb8" secondAttribute="trailing" id="pLV-pI-fMb"/>
@@ -199,6 +214,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d1-2q-mFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TZU-vv-1YP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="795.6521739130435" y="132.88043478260872"/>
         </scene>
@@ -297,6 +313,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
